@@ -1,0 +1,110 @@
+/* Global styles for the whole website */
+
+
+/* General Reset for Body */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Navbar behavior */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+nav {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav ul li a {
+  font-size: 1.125rem;
+  color: #4A4A4A;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #F7C04C; /* Yellow hover color */
+}
+
+/* Logo Styling */
+header .max-w-6xl {
+  text-align: center;
+  padding: 2rem;
+}
+
+header img {
+  max-height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure that page content below the header is visible */
+body {
+  padding-top: 80px; /* Adjust as needed based on the header's height */
+}
+
+/* Set a smooth base font style */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8fafc; /* Light background color */
+  color: #1f2937; /* Dark text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+  color: #4f46e5; /* Link color */
+}
+
+a:hover {
+  color: #2c3e50; /* Darker shade on hover */
+}
+
+/* Set up some basic layout properties */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Tailwind CSS classes for responsive layouts */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
