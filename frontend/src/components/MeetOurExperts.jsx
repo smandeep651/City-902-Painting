@@ -18,7 +18,7 @@ export default function MeetOurExperts() {
   ];
 
   return (
-    <section id="meet-our-experts" className="py-16 bg-white text-center">
+    <section id="meet-our-experts" className="py-16 px-8 bg-white text-center">
       <h3 className="text-4xl font-bold text-blue-900">Meet Our Experts</h3>
       <div className="flex justify-center gap-16 mt-8">
         {experts.map((expert, index) => (
