@@ -1,61 +1,43 @@
-// src/components/Careers.jsx
-import React from 'react';
+import { motion } from 'framer-motion';
 
-const Careers = () => {
+export default function Careers() {
   return (
-    <section id="careers" className="mt-16 text-center bg-blue-100 py-12 px-6">
-      <h2 className="text-3xl font-semibold text-gray-800 mb-6">Join Our Team</h2>
-      <p className="text-lg text-gray-600 mb-8">
-        We're always looking for passionate and skilled individuals to join our growing team. If you're interested in working with us, please reach out!
-      </p>
+    <section
+      id="careers"
+      className="py-16 text-center relative"
+      style={{
+        backgroundImage: 'url(/painter.jpg)',
+        backgroundSize: 'contain',  // Ensures image fits fully within the section
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',  // Prevents image from repeating
+        height: '500px',  // You can adjust the height as needed
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-40"></div> {/* Overlay for better text visibility */}
+      
+      <div className="relative z-10">
+        <motion.h3
+          className="text-4xl font-bold text-white"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          Join Our Team
+        </motion.h3>
 
-      {/* Career Form */}
-      <div className="bg-white p-8 shadow-lg rounded-lg mx-auto max-w-xl">
-        <h3 className="text-2xl font-semibold text-center text-gray-800 mb-4">Submit Your Resume</h3>
-        <form className="space-y-4">
-          {/* Name */}
-          <div>
-            <label className="block text-gray-700 font-medium">Full Name</label>
-            <input
-              type="text"
-              className="w-full border-gray-300 p-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Your Full Name"
-              required
-            />
-          </div>
+        <p className="text-gray-200 mt-4 max-w-2xl mx-auto">
+          At City 902 Painting, we're always looking for passionate and talented individuals to join our team. We offer great benefits, competitive pay, and an opportunity to work on high-profile projects.
+        </p>
 
-          {/* Email */}
-          <div>
-            <label className="block text-gray-700 font-medium">Email</label>
-            <input
-              type="email"
-              className="w-full border-gray-300 p-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Your Email"
-              required
-            />
-          </div>
-
-          {/* Resume Upload */}
-          <div>
-            <label className="block text-gray-700 font-medium">Upload Resume</label>
-            <input
-              type="file"
-              className="w-full border-gray-300 p-2 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
-              required
-            />
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300"
+        <div className="mt-6">
+          <a
+            href="#contact"
+            className="bg-yellow-400 text-black px-6 py-3 font-semibold rounded-lg shadow-lg hover:bg-yellow-500 transition"
           >
-            Submit Application
-          </button>
-        </form>
+            Apply Now
+          </a>
+        </div>
       </div>
     </section>
   );
-};
-
-export default Careers;
+}

@@ -1,30 +1,38 @@
-import React from "react";
-import ellisdonLogo from "../assets/ellisdon.jpg";
-import lindsayLogo from "../assets/lindsay.jpg";
-import birdLogo from "../assets/bird.jpg";
-import pclLogo from "../assets/pcl.png"; // Example additional company
+import { motion } from 'framer-motion';
+import { Carousel } from 'react-responsive-carousel'; // Ensure you have this library
 
-const Testimonials = () => {
+export default function Testimonials() {
+  const testimonials = [
+    { text: "CITY 902 Painting transformed our office. Professional & on time!", author: "Ellis Don" },
+    { text: "Best residential painters in Nova Scotia! Highly recommend.", author: "A Happy Homeowner" },
+    { text: "Excellent workmanship! They exceeded our expectations.", author: "Lindsay Construction" },
+    { text: "Reliable and efficient service. Would definitely hire again!", author: "Bird Construction" }
+  ];
+
   return (
-    <section id="testimonials" className="bg-gray-100 py-12 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">Our Trusted Partners</h2>
-        <p className="text-gray-600 text-lg mb-8">
-          We are proud to have worked with some of the most prestigious builders in Halifax.
-        </p>
-
-        {/* Logos Section with animation */}
-        <div className="flex justify-center items-center space-x-12 overflow-hidden">
-          <div className="flex animate-marquee space-x-12">
-            <img src={ellisdonLogo} alt="EllisDon" className="h-16 object-contain" />
-            <img src={lindsayLogo} alt="Lindsay Construction" className="h-16 object-contain" />
-            <img src={birdLogo} alt="Bird Construction" className="h-16 object-contain" />
-            <img src={pclLogo} alt="PCL Construction" className="h-16 object-contain" />
-          </div>
-        </div>
-      </div>
+    <section id="testimonials" className="py-16 bg-blue-900 text-white text-center">
+      <motion.h3 
+        className="text-4xl font-bold"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        What Our Clients Say
+      </motion.h3>
+      <Carousel showThumbs={false} autoPlay infiniteLoop className="max-w-2xl mx-auto mt-8">
+        {testimonials.map((testimonial, index) => (
+          <motion.div 
+            key={index} 
+            className="p-6" 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.3 }}
+          >
+            <p className="text-lg">"{testimonial.text}"</p>
+            <h5 className="mt-4 font-bold">- {testimonial.author}</h5>
+          </motion.div>
+        ))}
+      </Carousel>
     </section>
   );
-};
-
-export default Testimonials;
+}
