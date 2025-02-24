@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import MeetOurExperts from './components/MeetOurExperts'; // Ensure you import this component
 import Careers from './components/Careers'; // Ensure you import this component
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
+import { FaViacoin } from 'react-icons/fa';
 
 function App() {
   return (
