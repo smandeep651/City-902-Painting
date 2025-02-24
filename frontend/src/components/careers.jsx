@@ -17,7 +17,7 @@ export default function Careers() {
       
       <div className="relative z-10">
         <motion.h3
-          className="text-4xl font-bold text-white"
+          className="text-4xl font-bold mt-10 text-white"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}

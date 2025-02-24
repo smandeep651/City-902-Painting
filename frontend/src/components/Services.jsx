@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Services() {
   const services = [
@@ -12,24 +12,28 @@ export default function Services() {
 
   return (
     <section id="services" className="py-16 bg-gray-100 text-center">
-      <h3 className="text-4xl font-bold text-blue-900">Our Services</h3>
-      <p className="text-gray-600 mt-2">We offer top-quality painting solutions for commercial and residential properties.</p>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 px-10">
+      <h3 className="text-4xl mt-8 font-bold text-blue-900">Our Services</h3>
+      <p className="text-gray-600 mt-2 text-lg max-w-2xl mx-auto">
+        We offer top-quality painting solutions for commercial and residential properties.
+      </p>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 px-6 lg:px-12">
         {services.map((service, index) => (
-          <motion.div 
-            key={index} 
-            className="bg-white p-6 rounded-lg shadow-lg hover:bg-yellow-50 transition"
+          <motion.div
+            key={index}
+            className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all"
             whileHover={{ scale: 1.05 }}
           >
             <div className="mb-4">
-              <img 
-                src={service.img} 
-                alt={service.title} 
-                className="w-full h-40 object-cover rounded-md" 
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-full h-48 object-cover rounded-lg"
               />
             </div>
             <h4 className="text-2xl font-bold text-blue-900 mb-2">{service.title}</h4>
-            <p className="text-gray-700">High-quality {service.title.toLowerCase()} services to ensure perfection.</p>
+            <p className="text-gray-700 text-base">
+              High-quality {service.title.toLowerCase()} services to ensure perfection.
+            </p>
           </motion.div>
         ))}
       </div>

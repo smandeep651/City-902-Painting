@@ -6,21 +6,20 @@ export default function MeetOurExperts() {
       name: "Mandeep Singh",
       title: "Operations Manager",
       image: "/me.jpg",
-      description: "John has over 15 years of experience in the painting industry, specializing in residential and commercial projects. His attention to detail and commitment to excellence make him a true expert in his field."
+      description: "Mandeep with years of experience in the painting industry, specializing in residential and commercial projects. His attention to detail and commitment to excellence make him a true expert in his field."
     },
     {
       name: "Anit Choudhary",
-      
       title: "Project Manager",
       image: "/Anit.jpg",
-      description: "Jane brings 10 years of project management experience to the team. Her organizational skills and leadership ensure that every project runs smoothly, from start to finish."
+      description: "Anit brings years of project management experience to the team. Her organizational skills and leadership ensure that every project runs smoothly, from start to finish."
     }
   ];
 
   return (
-    <section id="meet-our-experts" className="py-16 px-8 bg-white text-center">
-      <h3 className="text-4xl font-bold text-blue-900">Meet Our Experts</h3>
-      <div className="flex justify-center gap-16 mt-8">
+    <section id="meet-our-experts" className="py-16 px-8 mt-10 bg-white text-center">
+      <h3 className="text-4xl font-bold  mt-10 text-blue-900">Meet Our Experts</h3>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-16 mt-8">
         {experts.map((expert, index) => (
           <motion.div 
             key={index} 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section 
-      className="relative h-screen bg-cover bg-center flex items-center justify-center text-white text-center"
+      className="relative h-screen bg-cover bg-center flex items-center justify-center text-white text-center pt-20 md:pt-0" 
       style={{ backgroundImage: `url(/lobby1.jpg)` }}  // Correct path from public folder
     >
       <motion.div 

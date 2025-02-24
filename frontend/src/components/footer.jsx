@@ -2,46 +2,34 @@ import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-blue-900 text-white py-6">
       <div className="container mx-auto text-center">
         {/* Company Info */}
-        <div className="mb-6">
-          <h3 className="text-2xl font-semibold">City 902 Painting</h3>
-          <p className="text-lg mt-2">Proudly serving Halifax and surrounding areas with quality painting services.</p>
-          <p className="mt-2">Address: 123 Painting Lane, Halifax, Nova Scotia</p>
-        </div>
+        <h3 className="text-2xl font-bold">City 902 Painting</h3>
+        <p className="text-sm mt-1">Proudly serving Halifax and surrounding areas.</p>
 
         {/* Social Media Links */}
-        <div className="flex justify-center space-x-6 mb-6">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-600 transition">
+        <div className="flex justify-center space-x-6 my-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+            className="text-xl hover:text-yellow-400 hover:scale-110 transition duration-300">
             <FaFacebook />
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-pink-500 transition">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+            className="text-xl hover:text-yellow-400 hover:scale-110 transition duration-300">
             <FaInstagram />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400 transition">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+            className="text-xl hover:text-yellow-400 hover:scale-110 transition duration-300">
             <FaTwitter />
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-700 transition">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            className="text-xl hover:text-yellow-400 hover:scale-110 transition duration-300">
             <FaLinkedin />
           </a>
         </div>
 
-        {/* Additional Information */}
-        <div className="mt-8">
-          <h4 className="text-xl font-semibold">Our Services</h4>
-          <ul className="mt-2 text-gray-400">
-            <li>Residential Painting</li>
-            <li>Commercial Painting</li>
-            <li>Industrial Coatings</li>
-            <li>Exterior & Interior Painting</li>
-          </ul>
-        </div>
-
         {/* Footer Bottom */}
-        <div className="text-sm mt-6">
-          <p>&copy; {new Date().getFullYear()} City 902 Painting. All rights reserved.</p>
-        </div>
+        <p className="text-xs text-gray-300">&copy; {new Date().getFullYear()} City 902 Painting. All rights reserved.</p>
       </div>
     </footer>
   );

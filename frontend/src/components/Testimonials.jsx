@@ -10,26 +10,36 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-16 bg-blue-900 text-white text-center">
+    <section 
+      id="testimonials" 
+      className="py-16 bg-blue-900 text-white text-center pt-24 sm:pt-28 md:pt-32"  // Adjusted padding-top for better spacing
+    >
       <motion.h3 
-        className="text-4xl font-bold"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         What Our Clients Say
       </motion.h3>
-      <Carousel showThumbs={false} autoPlay infiniteLoop className="max-w-2xl mx-auto mt-8">
+      <Carousel 
+        showThumbs={false} 
+        autoPlay 
+        infiniteLoop 
+        className="max-w-full sm:max-w-2xl mx-auto mt-8 px-4"
+        interval={5000} 
+        transitionTime={700}
+      >
         {testimonials.map((testimonial, index) => (
           <motion.div 
             key={index} 
-            className="p-6" 
+            className="p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.3 }}
           >
-            <p className="text-lg">"{testimonial.text}"</p>
-            <h5 className="mt-4 font-bold">- {testimonial.author}</h5>
+            <p className="text-lg sm:text-xl md:text-2xl">{`"${testimonial.text}"`}</p>
+            <h5 className="mt-4 font-bold text-sm sm:text-base md:text-lg">- {testimonial.author}</h5>
           </motion.div>
         ))}
       </Carousel>

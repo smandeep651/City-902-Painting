@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="about" className="py-16 bg-white text-center">
       {/* Heading */}
-      <h3 className="text-4xl font-bold text-blue-900 mb-6">About Us</h3>
+      <h3 className="text-4xl mt-8 font-bold text-blue-900 mb-6">About Us</h3>
 
       {/* Company Introduction */}
       <div className="max-w-4xl mx-auto mb-8">
