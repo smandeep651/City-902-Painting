@@ -7,7 +7,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import Footer from './components/footer';
+import Footer from './components/Footer';
 import MeetOurExperts from './components/MeetOurExperts'; // Ensure you import this component
 import Careers from './components/Careers'; // Ensure you import this component
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
