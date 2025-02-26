@@ -51,7 +51,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 bg-gray-100 text-center">
       <motion.h3
-        className="text-4xl mt-8 font-bold text-blue-900"
+        className="text-4xl mt-12 font-bold text-blue-900"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

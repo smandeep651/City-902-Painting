@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-scroll"; // Importing smooth scroll package
 
 export default function Services() {
   const services = [
@@ -12,7 +13,7 @@ export default function Services() {
 
   return (
     <section id="services" className="py-16 bg-gray-100 text-center">
-      <h3 className="text-4xl mt-8 font-bold text-blue-900">Our Services</h3>
+      <h3 className="text-4xl mt-12 font-bold text-blue-900">Our Services</h3>
       <p className="text-gray-600 mt-2 text-lg max-w-2xl mx-auto">
         We offer top-quality painting solutions for commercial and residential properties.
       </p>
@@ -34,6 +35,15 @@ export default function Services() {
             <p className="text-gray-700 text-base">
               High-quality {service.title.toLowerCase()} services to ensure perfection.
             </p>
+            {/* Adding smooth scroll for buttons */}
+            <Link
+              to={service.title.toLowerCase().replace(" & ", "-").replace(" ", "-")} // Adjusts target id dynamically
+              smooth={true}
+              duration={500}
+              className="text-blue-500 mt-4 inline-block"
+            >
+              Learn More
+            </Link>
           </motion.div>
         ))}
       </div>

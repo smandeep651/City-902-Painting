@@ -15,7 +15,7 @@ export default function Testimonials() {
       className="py-16 bg-blue-900 text-white text-center pt-24 sm:pt-28 md:pt-32"  // Adjusted padding-top for better spacing
     >
       <motion.h3 
-        className="text-3xl sm:text-4xl md:text-5xl font-bold"
+        className="text-3xl mt-12 sm:text-4xl md:text-5xl font-bold"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
