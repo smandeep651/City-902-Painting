@@ -5,6 +5,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/", // Ensure this is set correctly
   build: {
-    outDir: "dist", // This is the folder Vercel needs
+    outDir: "frontend/dist", // This is the folder Vercel needs
   },
 });
